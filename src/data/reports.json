@@ -1,0 +1,58 @@
+{
+  "reports": [
+    {
+      "id": "demographic-analysis-2025",
+      "name": "Demographic Analysis 2025",
+      "theme": "demography",
+      "description": "Comprehensive analysis of population trends.",
+      "thumbnail": "/images/demographic-analysis.png",
+      "file": "/reports/demographic-analysis-2025.pdf",
+      "lastUpdated": "2025-06-01"
+    },
+    {
+      "id": "health-survey-2025",
+      "name": "Annual Health Survey 2025",
+      "theme": "health",
+      "description": "Detailed report on healthcare metrics and public health outcomes",
+      "thumbnail": "/images/health-report-2025.png",
+      "file": "/reports/health-survey-2025.pdf",
+      "lastUpdated": "2025-05-15"
+    },
+    {
+      "id": "health-survey-2025",
+      "name": "Annual Health Survey 2025",
+      "theme": "health",
+      "description": "Detailed report on healthcare metrics and public health outcomes",
+      "thumbnail": "/images/health-report-2025.png",
+      "file": "/reports/health-survey-2025.pdf",
+      "lastUpdated": "2025-05-15"
+    },
+    {
+      "id": "education-report-2025",
+      "name": "Education Report 2025",
+      "theme": "education",
+      "description": "Analysis of educational infrastructure and student performance metrics",
+      "thumbnail": "/images/edu-report-2025.png",
+      "file": "/reports/education-report-2025.pdf",
+      "lastUpdated": "2025-04-20"
+    },
+    {
+      "id": "urbanization-study-2025",
+      "name": "Urbanization Study 2025",
+      "theme": "migration",
+      "description": "Study on urban growth patterns and migration trends in Odisha",
+      "thumbnail": "/images/urban-report-2025.png",
+      "file": "/reports/urbanization-study-2025.pdf",
+      "lastUpdated": "2025-06-10"
+    },
+    {
+      "id": "employment-trends-2025",
+      "name": "Employment Trends 2025",
+      "theme": "employment",
+      "description": "Report on workforce participation and employment statistics in Odisha",
+      "thumbnail": "/images/employment-report-2025.png",
+      "file": "/reports/employment-trends-2025.pdf",
+      "lastUpdated": "2025-05-30"
+    }
+  ]
+}

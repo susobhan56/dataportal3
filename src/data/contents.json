@@ -1,0 +1,60 @@
+{
+  "recentContent": [
+    {
+      "id": "pop-2021",
+      "title": "Population Statistics 2021",
+      "theme": "demography",
+      "abstract": "Comprehensive analysis of Odisha's population distribution and growth trends in 2021",
+      "thumbnail": "/images/pop-2021.png",
+      "type": "chart",
+      "lastUpdated": "2025-06-15",
+      "images": ["/images/pop-2021-graph1.png", "/images/pop-2021-map.png"],
+      "graphs": ["/images/pop-2021-graph2.svg"],
+      "article": "<p>The population of Odisha in 2021 reached a new milestone, with significant growth in urban areas. The following graphs illustrate the demographic changes and migration patterns observed over the last decade.</p><p>Key highlights include a steady increase in literacy rates and a shift in age distribution, as shown in the charts below.</p>"
+    },
+    {
+      "id": "health-indicators",
+      "title": "Health Indicators Report",
+      "theme": "health",
+      "abstract": "Key health metrics and healthcare accessibility data across districts",
+      "thumbnail": "/images/health-2025.png",
+      "type": "report",
+      "lastUpdated": "2025-06-10",
+      "images": ["/images/health-2025-hospital.png"],
+      "graphs": ["/images/health-2025-bar.svg"],
+      "article": "<p>This report summarizes the health indicators for Odisha in 2025, focusing on district-wise hospital access and outcomes. The bar chart below shows the comparative performance of districts in key health metrics.</p>"
+    },
+    {
+      "id": "education-survey",
+      "title": "Education Survey Results",
+      "theme": "education",
+      "abstract": "Annual survey results on educational outcomes and infrastructure",
+      "thumbnail": "/images/edu-survey.png",
+      "type": "dataset",
+      "lastUpdated": "2025-06-01",
+      "images": ["/images/edu-survey-classroom.png"],
+      "graphs": ["/images/edu-survey-pie.svg"],
+      "article": "<p>The 2025 education survey highlights improvements in school infrastructure and student performance. The pie chart below breaks down the distribution of educational resources across the state.</p>"
+    },
+    {
+      "id": "urbanization-2025",
+      "title": "Odisha Urbanization Trends",
+      "theme": "migration",
+      "abstract": "Analysis of urban growth and migration patterns in Odisha for 2025.",
+      "thumbnail": "/images/urban-thumb.png",
+      "type": "chart",
+      "lastUpdated": "2025-06-17",
+      "images": ["/images/urban-photo.jpg"],
+      "graphs": ["/images/urban-graph.svg"],
+      "article": "<p>Odisha has seen rapid urbanization in recent years. The following graph shows the migration from rural to urban areas, while the image below captures a new cityscape. <strong>Key drivers</strong> include economic opportunities and infrastructure development.</p><ul><li>Urban population increased by 12% since 2020</li><li>Major cities: Bhubaneswar, Cuttack, Rourkela</li></ul>",
+      "chartData": [
+        { "name": "2015", "value": 32 },
+        { "name": "2017", "value": 36 },
+        { "name": "2019", "value": 41 },
+        { "name": "2021", "value": 47 },
+        { "name": "2023", "value": 53 },
+        { "name": "2025", "value": 60 }
+      ]
+    }
+  ]
+}

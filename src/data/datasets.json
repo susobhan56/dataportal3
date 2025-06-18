@@ -1,0 +1,40 @@
+{
+  "datasets": {
+    "raw": [
+      {
+        "id": "census-2021",
+        "name": "Census 2021 Raw Data",
+        "description": "Complete census data for Odisha state in CSV format",
+        "type": "csv",
+        "size": "2.5 MB",
+        "lastUpdated": "2025-01-15"
+      },
+      {
+        "id": "health-metrics",
+        "name": "Healthcare Metrics 2024",
+        "description": "District-wise healthcare facility and outcome data",
+        "type": "excel",
+        "size": "1.8 MB",
+        "lastUpdated": "2025-03-20"
+      }
+    ],
+    "analyzed": [
+      {
+        "id": "population-trends",
+        "name": "Population Trends Analysis",
+        "description": "Analyzed demographic patterns from 2015-2025",
+        "type": "json",
+        "size": "1.2 MB",
+        "lastUpdated": "2025-05-10"
+      },
+      {
+        "id": "education-outcomes",
+        "name": "Education Outcomes Study",
+        "description": "Processed data on educational achievements",
+        "type": "excel",
+        "size": "3.1 MB",
+        "lastUpdated": "2025-04-15"
+      }
+    ]
+  }
+}

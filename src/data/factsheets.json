@@ -1,0 +1,20 @@
+{
+  "factsheets": [
+    {
+      "id": "odisha-factsheet-2025",
+      "name": "Odisha Factsheet 2025",
+      "description": "Key statistics and highlights for Odisha in 2025.",
+      "thumbnail": "/images/odisha-factsheet-2025.png",
+      "file": "/factsheets/odisha-factsheet-2025.pdf",
+      "lastUpdated": "2025-06-10"
+    },
+    {
+      "id": "urban-factsheet-2025",
+      "name": "Urbanization Factsheet 2025",
+      "description": "Urbanization trends and data for Odisha.",
+      "thumbnail": "/images/urban-factsheet-2025.png",
+      "file": "/factsheets/urban-factsheet-2025.pdf",
+      "lastUpdated": "2025-06-12"
+    }
+  ]
+}
