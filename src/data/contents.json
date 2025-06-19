@@ -55,6 +55,79 @@
         { "name": "2023", "value": 53 },
         { "name": "2025", "value": 60 }
       ]
+    },
+    {
+      "id": "ageing-article-1",
+      "title": "Ageing Population Trends",
+      "theme": "ageing",
+      "abstract": "Analysis of Odisha's ageing population and support systems.",
+      "thumbnail": "/images/ageing-article-1.png",
+      "type": "report",
+      "lastUpdated": "2025-06-18",
+      "images": [],
+      "graphs": [],
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><iframe src='https://flo.uri.sh/visualisation/23224828/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/23224828/?utm_source=embed&utm_campaign=visualisation/23224828' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>"
+    },
+    {
+      "id": "ageing-article-2",
+      "title": "Ageing Population Trends",
+      "theme": "ageing",
+      "abstract": "Analysis of Odisha's ageing population and support systems.",
+      "thumbnail": "/images/ageing-article-1.png",
+      "type": "report",
+      "lastUpdated": "2025-06-18",
+      "images": [],
+      "graphs": [],
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><iframe src='https://flo.uri.sh/visualisation/23224828/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/23224828/?utm_source=embed&utm_campaign=visualisation/23224828' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>"
+    },
+    {
+      "id": "ageing-article-3",
+      "title": "Ageing Population Trends",
+      "theme": "ageing",
+      "abstract": "Analysis of Odisha's ageing population and support systems.",
+      "thumbnail": "/images/ageing-article-1.png",
+      "type": "report",
+      "lastUpdated": "2025-06-18",
+      "images": [],
+      "graphs": [],
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><iframe src='https://flo.uri.sh/visualisation/23224828/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/23224828/?utm_source=embed&utm_campaign=visualisation/23224828' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>"
+    },
+    {
+      "id": "employment-2025",
+      "title": "Employment Trends 2025",
+      "theme": "employment",
+      "abstract": "Report on workforce participation and employment statistics in Odisha.",
+      "thumbnail": "/images/employment-2025.png",
+      "type": "report",
+      "lastUpdated": "2025-06-20",
+      "images": ["/images/employment-2025-office.jpg"],
+      "graphs": ["/images/employment-2025-line.svg"],
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><iframe src='https://flo.uri.sh/visualisation/23224828/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/23224828/?utm_source=embed&utm_campaign=visualisation/23224828' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>"
+    },
+    {
+      "id": "employment-2025",
+      "title": "Employment Trends 2025",
+      "theme": "employment",
+      "abstract": "Report on workforce participation and employment statistics in Odisha.",
+      "thumbnail": "/images/employment-2025.png",
+      "type": "report",
+      "lastUpdated": "2025-06-20",
+      "images": ["/images/employment-2025-office.jpg"],
+      "graphs": ["/images/employment-2025-line.svg"],
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><iframe src='https://flo.uri.sh/visualisation/23224828/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/23224828/?utm_source=embed&utm_campaign=visualisation/23224828' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>"
+    },
+    {
+      "id": "health-1",
+      "title": "Health Parameters",
+      "theme": "health",
+      "abstract": "Report on health indicators and statistics in Odisha.",
+      "thumbnail": "/images/health-1.png",
+      "type": "report",
+      "lastUpdated": "2025-06-20",
+      "images": ["/images/employment-2025-office.jpg"],
+      "graphs": ["/images/employment-2025-line.svg"],
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><iframe src='https://flo.uri.sh/visualisation/23224828/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:400px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/23224828/?utm_source=embed&utm_campaign=visualisation/23224828' target='_top' style='text-decoration:none!important'><img alt='Made with Flourish' src='https://public.flourish.studio/resources/made_with_flourish.svg' style='width:105px!important;height:16px!important;border:none!important;margin:0!important;'> </a></div>"
     }
+    
   ]
 }

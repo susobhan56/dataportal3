@@ -31,6 +31,16 @@ export default function ContentDetail({ content, themeName }: ContentDetailProps
             {content.type}
           </p>
         </div>
+        {/* Graph/Image preview above article heading */}
+        {(content.graphs && content.graphs.length > 0) ? (
+          <div className="mb-6 flex justify-center">
+            <img src={content.graphs[0]} alt="Graph preview" className="rounded-lg border max-w-lg w-full" />
+          </div>
+        ) : (content.images && content.images.length > 0) ? (
+          <div className="mb-6 flex justify-center">
+            <img src={content.images[0]} alt="Image preview" className="rounded-lg border max-w-lg w-full" />
+          </div>
+        ) : null}
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           {content.title}
         </h1>

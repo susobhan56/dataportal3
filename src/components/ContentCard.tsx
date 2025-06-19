@@ -35,7 +35,7 @@ export default function ContentCard({
   }[type];
 
   // Prefer graph preview, then image, then thumbnail
-  const preview = graphs?.[0] || images?.[0] || thumbnail;
+  const preview = graphs && graphs.length > 0 ? graphs[0] : (images && images.length > 0 ? images[0] : thumbnail);
   const hasGraph = graphs && graphs.length > 0;
   const hasImage = images && images.length > 0;
 

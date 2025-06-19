@@ -56,14 +56,24 @@ export default function ThemeContent({ theme, content }: ThemeContentProps) {
           </motion.h1>
         </div>
         
-        <motion.p 
-          className="text-lg text-gray-600"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {theme.description}
-        </motion.p>
+        {theme.description.includes('<iframe') ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="prose max-w-none"
+            dangerouslySetInnerHTML={{ __html: theme.description }}
+          />
+        ) : (
+          <motion.p 
+            className="text-lg text-gray-600"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {theme.description}
+          </motion.p>
+        )}
       </div>
 
       <motion.div 
