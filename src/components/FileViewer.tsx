@@ -24,6 +24,18 @@ export default function FileViewer({ url, type }: FileViewerProps) {
   const [viewMode, setViewMode] = useState<'table' | 'raw'>('table');
   const [rawContent, setRawContent] = useState<string>('');
 
+  // ✅ Shortcut for PDFs — show iframe directly
+  if (type === 'pdf') {
+    return (
+      <div className="w-full h-[500px] mt-4 rounded-lg overflow-hidden border border-gray-200">
+        <iframe
+          src={url}
+          title="PDF Preview"
+          className="w-full h-full"
+        />
+      </div>
+    );
+  }
   useEffect(() => {
     const fetchData = async () => {
       try {
