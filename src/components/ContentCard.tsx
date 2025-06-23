@@ -43,7 +43,7 @@ export default function ContentCard({
     <Link href={`/themes/${theme}/${id}`}>
       <motion.div
         whileHover={{ y: -4 }}
-        className="bg-white rounded-lg shadow-md overflow-hidden"
+        className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full flex-1"
       >
         <div className="relative h-40">
           <Image
@@ -58,10 +58,10 @@ export default function ContentCard({
             {hasImage && <ImageIcon className="w-4 h-4 text-green-500" />}
           </div>
         </div>
-        <div className="p-4">
+        <div className="p-4 flex flex-col flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-1">{title}</h3>
-          <p className="text-sm text-gray-600 mb-2 line-clamp-2">{abstract}</p>
-          <div className="flex items-center justify-between text-xs text-gray-500">
+          <p className="text-sm text-gray-600 mb-2 line-clamp-2 flex-1">{abstract}</p>
+          <div className="flex items-center justify-between text-xs text-gray-500 mt-2">
             <span>{new Date(lastUpdated).toLocaleDateString()}</span>
             <span className="capitalize">{type}</span>
           </div>
