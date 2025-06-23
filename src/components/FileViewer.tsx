@@ -52,7 +52,7 @@ export default function FileViewer({ url, type }: FileViewerProps) {
               setLoading(false);
             },
             error: (error, file) => {
-              setError(error.message);
+              setError(typeof error === 'string' ? error : error?.message || 'Failed to parse CSV');
               setLoading(false);
             }
           });
@@ -119,7 +119,7 @@ export default function FileViewer({ url, type }: FileViewerProps) {
                 viewMode === 'table' ? 'bg-gray-100 text-primary-600' : 'text-gray-600'
               }`}
             >
-              <TableIcon className="w-5 h-5" />
+              <TableIcon className="w-7 h-7" />
             </button>
             <button
               onClick={() => setViewMode('raw')}
@@ -127,7 +127,7 @@ export default function FileViewer({ url, type }: FileViewerProps) {
                 viewMode === 'raw' ? 'bg-gray-100 text-primary-600' : 'text-gray-600'
               }`}
             >
-              <Code className="w-5 h-5" />
+              <Code className="w-7 h-7" />
             </button>
           </div>
         </div>
