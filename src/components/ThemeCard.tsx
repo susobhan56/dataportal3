@@ -32,25 +32,25 @@ export default function ThemeCard({ id, name, description, icon, slug }: ThemeCa
   const Icon = IconMap[icon] || Users;
 
   return (
-    <Link href={`/themes/${slug}`} prefetch={false}>
+    <Link href={`/themes/${slug}`}>
       <motion.div
         whileHover={{ y: -4 }}
-        className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full flex-1"
+        className="bg-white rounded-lg shadow-md overflow-hidden"
       >
-        <div className="p-6 flex flex-col flex-1">
+        <div className="p-6">
           <div className="flex items-center gap-4 mb-4">
             <div className="p-3 bg-primary-100 rounded-full">
               {useImageIcon ? (
-                <img src={iconPath} alt={icon} className="w-12 h-12 object-contain" />
+                <img src={iconPath} alt={icon} className="w-16 h-16 object-contain" />
               ) : (
-                <Icon className="w-12 h-12 text-primary-600" />
+                <Icon className="w-16 h-16 text-primary-600" />
               )}
             </div>
             <h3 className="text-xl font-semibold text-blue-900">
               {name}
             </h3>
           </div>
-          <p className="text-green-600 flex-1">
+          <p className="text-green-600">
             {description}
           </p>
         </div>

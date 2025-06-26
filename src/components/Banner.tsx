@@ -2,27 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
-import { useState } from 'react';
 
-interface BannerProps {
-  onSearch?: (query: string) => void;
-}
-
-export default function Banner({ onSearch }: BannerProps) {
-  const [query, setQuery] = useState('');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
-  };
-
-  const handleSearch = () => {
-    if (onSearch) onSearch(query.trim());
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') handleSearch();
-  };
-
+export default function Banner() {
   return (
     <div className="relative bg-indigo-800 text-white">
       {/* Background pattern */}
@@ -61,15 +42,11 @@ export default function Banner({ onSearch }: BannerProps) {
               </div>
               <input
                 type="text"
-                value={query}
-                onChange={handleInputChange}
-                onKeyDown={handleKeyDown}
                 placeholder="Search for datasets, reports, or topics..."
                 className="flex-1 px-4 py-3 text-gray-800 placeholder-gray-400 bg-transparent focus:outline-none"
               />
               <button
                 type="button"
-                onClick={handleSearch}
                 className="px-6 py-3 bg-indigo-600 text-white text-sm font-medium rounded-r-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Search

@@ -7,7 +7,6 @@ import { recentContent } from '@/data/contents.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Content, ContentType } from '@/types/content';
 import { Bell } from 'lucide-react';
-import { useState } from 'react';
 
 export default function Home() {
   // Animation variants for staggered content appearance
@@ -36,29 +35,9 @@ export default function Home() {
     return diff <= 3;
   }).length;
 
-  // Search state and handler
-  const [searchResults, setSearchResults] = useState<typeof typedContent | null>(null);
-
-  const handleSearch = (query: string) => {
-    if (!query) {
-      setSearchResults(null);
-      return;
-    }
-    const lower = query.toLowerCase();
-    const filtered = sortedContent.filter(content =>
-      content.title.toLowerCase().includes(lower) ||
-      content.abstract.toLowerCase().includes(lower) ||
-      content.theme.toLowerCase().includes(lower)
-    ).map(content => ({
-      ...content,
-      type: content.type as ContentType
-    }));
-    setSearchResults(filtered);
-  };
-
   return (
     <Layout>
-      <Banner onSearch={handleSearch} />
+      <Banner />
       
       {/* Recent Content Section */}
       <section className="container mx-auto px-4 py-16">
@@ -69,14 +48,8 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           Recently Updated Content
-          <span className="relative inline-block group">
-            <motion.span
-              whileHover={{ rotate: [0, -20, 20, -15, 15, -10, 10, 0] }}
-              transition={{ duration: 0.6 }}
-              className="inline-block"
-            >
-              <Bell className="w-7 h-7 text-primary-500" />
-            </motion.span>
+          <span className="relative inline-block">
+            <Bell className="w-7 h-7 text-primary-500" />
             {notificationCount > 0 && (
               <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full px-1.5 py-0.5 min-w-[20px] text-center">
                 {notificationCount}
@@ -91,7 +64,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-          {(searchResults !== null ? searchResults : typedContent).map(content => (
+          {typedContent.map((content) => (
             <ContentCard
               key={content.id}
               id={content.id}
@@ -104,10 +77,6 @@ export default function Home() {
             />
           ))}
         </motion.div>
-
-        {searchResults !== null && searchResults.length === 0 && (
-          <div className="text-center text-gray-500 mt-8">No results found.</div>
-        )}
       </section>
     </Layout>
   );
