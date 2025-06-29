@@ -10,30 +10,57 @@
       "lastUpdated": "2025-06-01"
     },
     {
-      "id": "health-survey-2025",
-      "name": "Annual Health Survey 2025",
+      "id": "demographic-trends-odisha-sibabrata-das",
+      "name": "Demographic Trends and Transition in Odisha, Sibabrata Das",
+      "theme": "demography",
+      "description": "Comprehensive analysis of population trends.",
+      "thumbnail": "/images/Demographic Trends and Transition in Odisha, Sibabrata Das.jpg",
+      "file": "/reports/Demographic Trends and Transition in Odisha, Sibabrata Das.pdf",
+      "lastUpdated": "2025-06-01"
+    },
+    {
+      "id": "district-population-projections-2021-2026",
+      "name": "District Level Population Projections in Selected States of India (MP, Bihar, Odisha, Rajasthan), 2021 & 2026, UNFP",
+      "theme": "demography",
+      "description": "District Level projections",
+      "thumbnail": "/images/District Level Population Projections in Selected States of India (MP, Bihar, Odisha, Rajasthan), 2021 & 2026, UNFPA.jpg",
+      "file": "/reports/District Level Population Projections in Selected States of India (MP, Bihar, Odisha, Rajasthan), 2021 & 2026, UNFPA.pdf",
+      "lastUpdated": "2025-06-01"
+    },
+ {
+      "id": "population-age-structure-2020",
+      "name": "Population age structure and sustainable development in Odisha, India, 2020",
+      "theme": "demography",
+      "description": "District Level projections",
+      "thumbnail": "/images/Population Projection for India and States- 2011-2036, ORGI.png",
+      "file": "/reports/Population age structure and sustainable development in Odisha, India, 2020.pdf",
+      "lastUpdated": "2025-06-01"
+    },
+    {
+      "id": "UNDESA_India overtakes",
+      "name": "UNDESA_India overtakes China as the world’s most populous country",
+      "theme": "demography",
+      "description": "District Level projections",
+      "thumbnail": "/images/UNDESA_India overtakes.png",
+      "file": "/reports/UNDESA_India overtakes China as the world’s most populous country.pdf",
+      "lastUpdated": "2025-06-01"
+    },
+    {
+      "id": "health-report-1",
+      "name": "Health of the Nation 2024",
       "theme": "health",
-      "description": "Detailed report on healthcare metrics and public health outcomes",
-      "thumbnail": "/images/health-report-2025.png",
-      "file": "/reports/health-survey-2025.pdf",
+      "description": "Decoding The Indian Health Quotient.",
+      "thumbnail": "/images/health of the Nation 2024_Apollo.jpg",
+      "file": "/reports/health of the Nation 2024_Apollo.pdf",
       "lastUpdated": "2025-05-15"
     },
     {
-      "id": "health-survey-2025",
-      "name": "Annual Health Survey 2025",
+      "id": "health-report-2",
+      "name": "Rural Health Statistics_RHS 2021-22",
       "theme": "health",
-      "description": "Detailed report on healthcare metrics and public health outcomes",
-      "thumbnail": "/images/health-report-2025.png",
-      "file": "/reports/health-survey-2025.pdf",
-      "lastUpdated": "2025-05-15"
-    },
-    {
-      "id": "education-report-2025",
-      "name": "Education Report 2025",
-      "theme": "education",
-      "description": "Analysis of educational infrastructure and student performance metrics",
-      "thumbnail": "/images/edu-report-2025.png",
-      "file": "/reports/education-report-2025.pdf",
+      "description": "A comprehensive overview of the rural health system in India, including data on healthcare facilities, human resources, and health indicators.",
+      "thumbnail": "/images/rural health Statistics 2021-22.jpg",
+      "file": "/reports/rural health Statistics_RHS 2021-22.pdf",
       "lastUpdated": "2025-04-20"
     },
     {

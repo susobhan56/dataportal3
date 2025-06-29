@@ -30,9 +30,9 @@ export default function ReportCard({
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className="bg-white rounded-lg shadow-md overflow-hidden"
+      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-stretch h-[340px] w-[270px] mx-auto"
     >
-      <div className="relative h-48">
+      <div className="relative h-36 w-full">
         <Image
           src={thumbnail}
           alt={name}
@@ -44,36 +44,34 @@ export default function ReportCard({
           <FileText className="w-5 h-5 text-gray-600" />
         </div>
       </div>
-      
-      <div className="p-6">
-        <div className="flex items-start justify-between">
-          <div>
-            <span className="inline-block px-3 py-1 text-xs font-medium text-indigo-600 bg-indigo-50 rounded-full mb-2">
+      <div className="p-4 flex flex-col flex-1">
+        <div className="flex items-start justify-between flex-1">
+          <div className="flex flex-col h-full">
+            <span className="inline-block px-2 py-0.5 text-xs font-medium text-indigo-600 bg-indigo-50 rounded-full mb-2">
               {theme}
             </span>
-            <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
-            <p className="mt-1 text-sm text-gray-500 line-clamp-2">{description}</p>
-            <p className="mt-2 text-sm text-gray-400">
+            <h3 className="text-base font-semibold text-gray-900 line-clamp-2">{name}</h3>
+            <p className="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">{description}</p>
+            <p className="mt-2 text-xs text-gray-400">
               Updated {new Date(lastUpdated).toLocaleDateString()}
             </p>
           </div>
         </div>
-
-        <div className="mt-4 flex items-center space-x-4">
+        <div className="mt-3 flex items-center space-x-2">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onView}
-            className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition-colors"
+            className="flex-1 flex items-center justify-center space-x-2 px-3 py-1.5 bg-indigo-600 text-white text-xs font-medium rounded-md hover:bg-indigo-700 transition-colors"
           >
             <FileText className="w-4 h-4" />
-            <span>View Report</span>
+            <span>View</span>
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onDownload}
-            className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-md transition-colors"
+            className="flex items-center space-x-2 px-3 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-50 rounded-md transition-colors"
           >
             <Download className="w-4 h-4" />
             <span>Download</span>
