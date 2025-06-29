@@ -5,12 +5,12 @@
       "title": "Population Statistics 2021",
       "theme": "demography",
       "abstract": "Comprehensive analysis of Odisha's population distribution and growth trends in 2021",
-      "thumbnail": "/images/pop-2021.png",
+      "thumbnail": "/images/Vital Statistics of India based on the Civil Registration System, 2021, ORGI.jpg",
       "type": "chart",
       "lastUpdated": "2025-06-15",
       "images": ["/images/pop-2021-graph1.png", "/images/pop-2021-map.png"],
       "graphs": ["/images/pop-2021-graph2.svg"],
-      "article": "<p>The population of Odisha in 2021 reached a new milestone, with significant growth in urban areas. The following graphs illustrate the demographic changes and migration patterns observed over the last decade.</p><p>Key highlights include a steady increase in literacy rates and a shift in age distribution, as shown in the charts below.</p>"
+      "article": "<p>The ageing population in Odisha is increasing, requiring new support systems and policies. The graph below illustrates the growth trend.</p><div style=\"position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;\"><iframe src=\"https://flo.uri.sh/visualisation/23224828/embed\" title=\"Interactive or visual content\" class=\"flourish-embed-iframe\" frameborder=\"0\" scrolling=\"no\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" sandbox=\"allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation\"></iframe></div>"
     },
     {
       "id": "health-indicators",
@@ -54,7 +54,7 @@
       "title": "Ageing Population Trends",
       "theme": "ageing",
       "abstract": "Analysis of Odisha's ageing population and support systems.",
-      "thumbnail": "/images/ageing-article-1.png",
+      "thumbnail": "/images/Vital Statistics of India based on the Civil Registration System, 2021, ORGI.jpg",
       "type": "report",
       "lastUpdated": "2025-06-18",
       "images": [],

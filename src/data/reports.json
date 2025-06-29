@@ -62,24 +62,7 @@
       "thumbnail": "/images/rural health Statistics 2021-22.jpg",
       "file": "/reports/rural health Statistics_RHS 2021-22.pdf",
       "lastUpdated": "2025-04-20"
-    },
-    {
-      "id": "urbanization-study-2025",
-      "name": "Urbanization Study 2025",
-      "theme": "migration",
-      "description": "Study on urban growth patterns and migration trends in Odisha",
-      "thumbnail": "/images/urban-report-2025.png",
-      "file": "/reports/urbanization-study-2025.pdf",
-      "lastUpdated": "2025-06-10"
-    },
-    {
-      "id": "employment-trends-2025",
-      "name": "Employment Trends 2025",
-      "theme": "employment",
-      "description": "Report on workforce participation and employment statistics in Odisha",
-      "thumbnail": "/images/employment-report-2025.png",
-      "file": "/reports/employment-trends-2025.pdf",
-      "lastUpdated": "2025-05-30"
+   
     }
   ]
 }
