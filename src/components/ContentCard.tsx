@@ -34,8 +34,8 @@ export default function ContentCard({
     dataset: Database,
   }[type];
 
-  // Prefer graph preview, then image, then thumbnail
-  const preview = graphs && graphs.length > 0 ? graphs[0] : (images && images.length > 0 ? images[0] : thumbnail);
+  // Always use the thumbnail at the top, regardless of images/graphs
+  const preview = thumbnail;
   const hasGraph = graphs && graphs.length > 0;
   const hasImage = images && images.length > 0;
 
@@ -43,7 +43,7 @@ export default function ContentCard({
     <Link href={`/themes/${theme}/${id}`}>
       <motion.div
         whileHover={{ y: -4 }}
-        className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full flex-1"
+        className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[320px] w-full max-w-xs flex-1"
       >
         <div className="relative h-40">
           <Image

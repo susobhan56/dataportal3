@@ -4,14 +4,13 @@ import { useState, useMemo } from 'react';
 import Layout from '@/components/Layout';
 import { motion } from 'framer-motion';
 import { FileText, Database, ChartBar, Filter, Search, X } from 'lucide-react';
-import { datasets } from '@/data/datasets.json';
+import { datasets as datasetsData } from '@/data/datasets.json';
 import { reports } from '@/data/reports.json';
 import ReportCard from '@/components/ReportCard';
 import type { Dataset } from '@/types/dataset';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
-type ContentType = 'all' | 'raw' | 'analyzed';
 type FileType = 'all' | 'csv' | 'excel' | 'json';
 type Tab = 'datasets' | 'reports' | 'factsheets';
 
@@ -26,15 +25,10 @@ const themes = [
 
 export default function RepositoryPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [contentType, setContentType] = useState<ContentType>('all');
   const [fileType, setFileType] = useState<FileType>('all');
   const [tab, setTab] = useState<Tab>('datasets');
 
-  const allDatasets = useMemo(() => {
-    const raw = datasets.raw.map(d => ({ ...d, category: 'raw' as const }));
-    const analyzed = datasets.analyzed.map(d => ({ ...d, category: 'analyzed' as const }));
-    return [...raw, ...analyzed];
-  }, []);
+  const allDatasets = useMemo(() => datasetsData, []);
 
   const filteredDatasets = useMemo(() => {
     return allDatasets.filter(dataset => {
@@ -42,12 +36,11 @@ export default function RepositoryPage() {
         dataset.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         dataset.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-      const matchesContentType = contentType === 'all' || dataset.category === contentType;
       const matchesFileType = fileType === 'all' || dataset.type === fileType;
 
-      return matchesSearch && matchesContentType && matchesFileType;
+      return matchesSearch && matchesFileType;
     });
-  }, [allDatasets, searchQuery, contentType, fileType]);
+  }, [allDatasets, searchQuery, fileType]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,7 +80,7 @@ export default function RepositoryPage() {
             <button
               className={`px-6 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${tab === 'factsheets' ? 'border-primary-600 text-primary-700 bg-white' : 'border-transparent text-gray-500 bg-gray-50 hover:text-primary-600'}`}
               onClick={() => {
-                window.location.href = '/repository/factsheets';
+                router.push('/repository/factsheets');
               }}
             >
               Factsheets
@@ -137,16 +130,6 @@ export default function RepositoryPage() {
 
                 <div className="flex gap-4">
                   <select
-                    value={contentType}
-                    onChange={(e) => setContentType(e.target.value as ContentType)}
-                    className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="all">All Content</option>
-                    <option value="raw">Raw Datasets</option>
-                    <option value="analyzed">Analyzed Data</option>
-                  </select>
-
-                  <select
                     value={fileType}
                     onChange={(e) => setFileType(e.target.value as FileType)}
                     className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
@@ -160,7 +143,7 @@ export default function RepositoryPage() {
               </div>
 
               {/* Filter Tags */}
-              {(searchQuery || contentType !== 'all' || fileType !== 'all') && (
+              {(searchQuery || fileType !== 'all') && (
                 <div className="flex flex-wrap gap-2">
                   {searchQuery && (
                     <motion.span
@@ -171,21 +154,6 @@ export default function RepositoryPage() {
                       Search: {searchQuery}
                       <button
                         onClick={() => setSearchQuery('')}
-                        className="ml-2 hover:text-primary-900"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    </motion.span>
-                  )}
-                  {contentType !== 'all' && (
-                    <motion.span
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      className="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm"
-                    >
-                      Type: {contentType}
-                      <button
-                        onClick={() => setContentType('all')}
                         className="ml-2 hover:text-primary-900"
                       >
                         <X className="w-4 h-4" />
@@ -255,16 +223,22 @@ export default function RepositoryPage() {
                       <span className="text-gray-500">{dataset.size}</span>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
-                        {dataset.category}
-                      </span>
+                    <div className="mt-4 flex items-center justify-end gap-2">
                       <Link
                         href={`/repository/${dataset.id}`}
                         className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                       >
                         View Details
                       </Link>
+                      {dataset.file && (
+                        <a
+                          href={dataset.file}
+                          download
+                          className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400"
+                        >
+                          Download
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.div>

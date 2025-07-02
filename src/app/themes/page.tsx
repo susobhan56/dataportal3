@@ -1,6 +1,6 @@
 'use client';
 
-import Layout from '@/components/Layout';
+import Layout from '../../components/Layout';
 import ThemeCard from '@/components/ThemeCard';
 import { themes } from '@/data/themes.json';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -1,4 +1,4 @@
-import Layout from '@/components/Layout';
+import Layout from '../../../components/Layout';
 import { themes } from '@/data/themes.json';
 import { recentContent } from '@/data/contents.json';
 import { notFound } from 'next/navigation';

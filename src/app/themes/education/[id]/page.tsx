@@ -1,23 +1,17 @@
-import Layout from '@/components/Layout';
-import { themes } from '@/data/themes.json';
-import { recentContent } from '@/data/contents.json';
 import { notFound } from 'next/navigation';
+import Layout from '@/components/Layout';
 
-export default function EducationArticlePage({ params }: { params: { id: string } }) {
-  const theme = themes.find((t) => t.slug === 'education');
-  const article = recentContent.find((c) => c.id === params.id && c.theme === 'education');
-
-  if (!theme || !article) notFound();
+export default async function EducationArticlePage({ params }: { params: { id: string } }) {
+  let ArticleComponent;
+  try {
+    ArticleComponent = (await import(`./articles/${params.id}`)).default;
+  } catch {
+    notFound();
+  }
 
   return (
     <Layout>
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-2xl font-bold text-primary-700 mb-2">{theme.name}</h1>
-          <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
-          <p className="text-gray-600 mb-4">{article.article ? <span dangerouslySetInnerHTML={{ __html: article.article }} /> : article.abstract}</p>
-        </div>
-      </section>
+      <ArticleComponent />
     </Layout>
   );
 }

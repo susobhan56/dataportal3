@@ -27,14 +27,17 @@ export default function ReportCard({
   onView,
   onDownload,
 }: ReportCardProps) {
+  // Always use the thumbnail at the top
+  const preview = thumbnail;
+
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-stretch h-[340px] w-[270px] mx-auto"
+      className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-stretch h-[320px] w-full max-w-xs mx-auto"
     >
       <div className="relative h-36 w-full">
         <Image
-          src={thumbnail}
+          src={preview}
           alt={name}
           fill
           className="object-cover"
