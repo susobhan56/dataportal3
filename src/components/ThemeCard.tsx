@@ -38,16 +38,6 @@ export default function ThemeCard({ id, name, description, icon, slug }: ThemeCa
         className="bg-white rounded-lg shadow-md overflow-hidden"
       >
         <div className="p-6">
-          {/* Show theme thumbnail if available */}
-          {typeof (icon) === 'string' && icon && (
-            <img
-              src={iconPath.replace('.gif', '.png')}
-              alt={name}
-              className="w-full h-32 object-cover rounded-lg mb-4"
-              style={{ background: '#f8fafc' }}
-              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
-            />
-          )}
           <div className="flex items-center gap-4 mb-4">
             <div className="p-3 bg-primary-100 rounded-full">
               {useImageIcon ? (
