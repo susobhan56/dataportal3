@@ -37,7 +37,7 @@
       "lastUpdated": "2025-06-01"
     },
     {
-      "id": "UNDESA_India overtakes",
+      "id": "undesa-india-overtakes",
       "name": "UNDESA_India overtakes China as the world’s most populous country",
       "theme": "demography",
       "description": "District Level projections",
@@ -58,6 +58,16 @@
       "id": "health-report-2",
       "name": "Rural Health Statistics_RHS 2021-22",
       "theme": "health",
+      "description": "A comprehensive overview of the rural health system in India, including data on healthcare facilities, human resources, and health indicators.",
+      "thumbnail": "/images/rural health Statistics 2021-22.jpg",
+      "file": "/reports/rural health Statistics_RHS 2021-22.pdf",
+      "lastUpdated": "2025-04-20"
+   
+    },
+    {
+      "id": "emp-report-1",
+      "name": "2020-Journal of public affair-Employment and economic growth dynamics in Odisha",
+      "theme": "employment",
       "description": "A comprehensive overview of the rural health system in India, including data on healthcare facilities, human resources, and health indicators.",
       "thumbnail": "/images/rural health Statistics 2021-22.jpg",
       "file": "/reports/rural health Statistics_RHS 2021-22.pdf",
