@@ -1,56 +1,67 @@
 {
   "datasets": [
     {
-      "id": "census-2021",
-      "name": "Sisughara Household Details",
+      "id": "edu1",
+      "name": "District Level Education Data 2023-24 UDISE+",
       "description": "Complete census data for Odisha state in Excel format",
       "type": "excel",
       "size": "2.5 MB",
       "lastUpdated": "2025-01-15",
-      "file": "/datasets/sisughara HH details.xlsx"
+      "file": "/datasets/District Level Education Data 2023-24 UDISE+.xlsx"
     },
     {
-      "id": "health-metrics",
-      "name": "Healthcare Metrics 2024",
+      "id": "health2",
+      "name": "District-wise Population Figures 1901-2036",
       "description": "District-wise healthcare facility and outcome data",
       "type": "excel",
       "size": "1.8 MB",
       "lastUpdated": "2025-03-20",
-      "file": "/datasets/health-metrics.xlsx"
+      "file": "/datasets/District-wise Population Figures 1901-2036.xlsx"
     },
     {
-      "id": "my-csv",
-      "name": "My Custom CSV",
-      "description": "Download my custom CSV data.",
+      "id": "health1",
+      "name":"Education Data DistrictWise",
+      "description": "Education Related Data.",
       "type": "csv",
       "size": "0.5 MB",
       "lastUpdated": "2025-07-01",
-      "file": "/datasets/myfile.csv"
+      "file": "/datasets/Education Data DistrciWise.xlsx"
     },
     {
-      "id": "my-excel",
-      "name": "My Custom Excel",
-      "description": "Download my custom Excel data.",
+      "id": "elderly1",
+      "name": "Elderly_pop & M&CH_Odisha_need_literature review",
+      "description": "Elderly data.",
       "type": "excel",
       "size": "0.8 MB",
       "lastUpdated": "2025-07-01",
-      "file": "/datasets/myfile.xlsx"
+      "file": "/datasets/Elderly_pop & M&CH_Odisha_need_literature review.xlsx"
     },
     {
-      "id": "population-trends",
-      "name": "Population Trends Analysis",
-      "description": "Analyzed demographic patterns from 2015-2025",
-      "type": "json",
+      "id": "emp1",
+      "name": "Health Data Analysis",
+      "description": "Analyzed health Matrices",
+      "type": "excel",
       "size": "1.2 MB",
-      "lastUpdated": "2025-05-10"
+      "lastUpdated": "2025-05-10",
+      "file": "/datasets/Health.xlsx"
     },
     {
-      "id": "education-outcomes",
-      "name": "Education Outcomes Study",
-      "description": "Processed data on educational achievements",
+      "id": "mig1",
+      "name": "Migration and Urbanization Trends",
+      "description": "Processed data on migration patterns",
       "type": "excel",
       "size": "3.1 MB",
-      "lastUpdated": "2025-04-15"
+      "lastUpdated": "2025-04-15",
+      "file": "/datasets/Migration and Urbanization.xlsx"
+    },
+    {
+      "id": "pop1",
+      "name": "Ageing Data Analysis",
+      "description": "Processed data on ageing populations",
+      "type": "excel",
+      "size": "3.1 MB",
+      "lastUpdated": "2025-04-15",
+      "file": "/datasets/Population Ageing.xlsx"
     }
   ]
 }

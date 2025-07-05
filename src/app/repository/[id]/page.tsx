@@ -24,10 +24,7 @@ const TypeIcons = {
 export default function DatasetPage({ params }: DatasetPageProps) {
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
-  const dataset = [
-    ...datasets.raw.map(d => ({ ...d, category: 'raw' as const })),
-    ...datasets.analyzed.map(d => ({ ...d, category: 'analyzed' as const }))
-  ].find(d => d.id === params.id);
+  const dataset = datasets.find(d => d.id === params.id);
 
   if (!dataset) {
     notFound();

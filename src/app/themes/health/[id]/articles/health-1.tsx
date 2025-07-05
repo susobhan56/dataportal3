@@ -14,7 +14,7 @@ export default function HealthArticle1() {
   return (
     <main className="themes-content">
       <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
-        Changing Populations, Unchanged Rights? SRHR <br /> in Odisha Today
+        Changing Populations, Unchanged Rights?<br /> SRHR  in Odisha Today
       </h1>
       <p className="para">
         Sexual rights involve the freedom to make decisions about one's sexual life, including access to 
