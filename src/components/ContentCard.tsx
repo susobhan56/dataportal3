@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FileText, ChartBar, Database, ImageIcon, BarChart3 } from 'lucide-react';
 
 interface ContentCardProps {
@@ -39,8 +38,14 @@ export default function ContentCard({
   const hasGraph = graphs && graphs.length > 0;
   const hasImage = images && images.length > 0;
 
+  // Use a plain <a> with window.location.href for hard reload navigation
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = `/themes/${theme}/${id}`;
+  };
+
   return (
-    <Link href={`/themes/${theme}/${id}`}>
+    <a href={`/themes/${theme}/${id}`} onClick={handleClick} style={{ textDecoration: 'none' }}>
       <motion.div
         whileHover={{ y: -4 }}
         className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[320px] w-full max-w-xs flex-1"
@@ -67,6 +72,6 @@ export default function ContentCard({
           </div>
         </div>
       </motion.div>
-    </Link>
+    </a>
   );
 }
