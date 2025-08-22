@@ -61,12 +61,7 @@ export default function DatasetPage({ params }: DatasetPageProps) {
               </div>
 
               <div className="grid grid-cols-2 gap-6 mb-8 text-sm">
-                <div>
-                  <span className="block text-gray-500 mb-1">Category</span>
-                  <span className="font-medium text-gray-900 capitalize">
-                    {dataset.category}
-                  </span>
-                </div>
+               
                 <div>
                   <span className="block text-gray-500 mb-1">Format</span>
                   <span className="font-medium text-gray-900 uppercase">

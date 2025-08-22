@@ -14,7 +14,7 @@ export default function HealthArticle2() {
   return (
     <main className="themes-content">
       <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
-        Hypertension and Diabetes on the Rise: Odisha’s <br /> Cross-Generational Health Crisis
+        Hypertension and Diabetes on the Rise: <br />Odisha’s  Cross-Generational Health Crisis
       </h1>
       <p className="para">
         The evolving disease landscape, coupled with shifting demographics—especially the growing 

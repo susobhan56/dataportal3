@@ -10,7 +10,7 @@ export default function HealthArticle5() {
   return (
     <main className="themes-content">
       <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
-        Addiction & Abuse: Undermining Odisha’s Human <br /> Capital
+        Addiction & Abuse: Undermining Odisha’s <br /> Human Capital
       </h1>
       <p className="para">
         Despite the Odisha government's 2013 ban on the sale and manufacture of tobacco, the latest family 

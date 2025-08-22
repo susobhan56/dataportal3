@@ -6,7 +6,10 @@ import ContentCard from '@/components/ContentCard';
 import { recentContent } from '@/data/contents.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Content, ContentType } from '@/types/content';
-import { Bell } from 'lucide-react';
+import { Bell, MessageCircle, Bot } from 'lucide-react';
+import { useState } from 'react';
+import Image from 'next/image';
+import SmartChatbot from '@/components/NewSmartChatbot';
 
 export default function Home() {
   // Animation variants for staggered content appearance
@@ -35,9 +38,36 @@ export default function Home() {
     return diff <= 3;
   }).length;
 
+  const [chatbotVisible, setChatbotVisible] = useState(true);
+
   return (
     <Layout>
       <Banner />
+      
+      {/* Chatbot */}
+      {!chatbotVisible ? (
+        <button
+          onClick={() => setChatbotVisible(true)}
+          className="fixed bottom-6 right-6 bg-primary-600 text-white rounded-full shadow-lg p-3 pr-4 hover:bg-primary-700 transition-colors z-50 flex items-center gap-2 group"
+          aria-label="Show Chat Assistant"
+        >
+          <div className="relative w-6 h-6">
+            <Image
+              src="/icons/chatbot.svg"
+              alt="Chatbot"
+              width={24}
+              height={24}
+              className="transition-transform group-hover:scale-110"
+            />
+          </div>
+          <span className="text-sm font-medium">Chat Assistant</span>
+        </button>
+      ) : (
+        <SmartChatbot
+          defaultVisible={true}
+          onVisibilityChange={setChatbotVisible}
+        />
+      )}
       
       {/* Recent Content Section */}
       <section className="container mx-auto px-4 py-16">

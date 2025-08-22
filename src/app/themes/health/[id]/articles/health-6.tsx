@@ -10,7 +10,7 @@ export default function HealthArticle6() {
   return (
     <main className="themes-content">
       <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
-        Odisha’s Double Burden of Malnutrition: Nutriti-<br />onal Challenges Across the Life Course
+        Odisha’s Double Burden of Malnutrition: <br />Nutritional Challenges Across the Life Course
       </h1>
       <p className="para">
         India is currently experiencing a significant rise in various forms of malnutrition, 
@@ -25,7 +25,7 @@ export default function HealthArticle6() {
       </p>
       <h4 className="para">
         <i>
-          Nutritional Status among Adults
+          <b>Nutritional Status among Adults</b>
         </i>
       </h4>
       <p className="para">
@@ -51,7 +51,7 @@ export default function HealthArticle6() {
       </p>
       <h4 className="para">
         <i>
-          Nutritional Status among Elderly
+          <b>Nutritional Status among Elderly</b>
         </i>
       </h4>
       <p className="para">

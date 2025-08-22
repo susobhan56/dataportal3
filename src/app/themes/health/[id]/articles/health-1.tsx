@@ -25,6 +25,10 @@ export default function HealthArticle1() {
         growth, and family planning. Access to reproductive health services influences decisions about the 
         number, timing, and spacing of children, while sexual rights impact maternal health, adolescent 
         fertility, and the incidence of sexually transmitted infections. <br />
+        <FlourishEmbed src="visualisation/23856199" />
+        <p style={{ textAlign: "right", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%", marginLeft: "24%" }}>
+          Source: NFHS-4,5
+        </p>
         Understanding reproductive rights involves access to information about reproductive health, 
         enabling informed decisions regarding contraception, pregnancy, childbirth, and maternal health. 
         In Odisha, knowledge of reproductive rights rose from 19% in 2005-06 to 30% in 2019-21, with variations 
@@ -47,10 +51,8 @@ export default function HealthArticle1() {
       <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
         Contraceptive Usage among Men and Married Women in Odisha
       </h5>
-      <FlourishEmbed src="visualisation/23856199" />
-      <p style={{ textAlign: "left", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%", marginLeft: "24%" }}>
-        Source: NFHS-4,5
-      </p>
+      
+     
       <p className="para">
         Odisha's demographic transition, marked by declining fertility rates (TFR) and aging populations, is 
         intricately linked to the usage of contraception, although the relationship is not as straightforward 

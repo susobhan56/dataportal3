@@ -21,6 +21,7 @@ const themes = [
   { key: 'employment', label: 'Employment' },
   { key: 'migration', label: 'Migration & Urbanisation' },
   { key: 'education', label: 'Education' },
+  { key: 'development', label: 'Development' },
 ];
 
 const dataSources = [

@@ -52,7 +52,7 @@ export default function ThemeContent({ theme, content }: ThemeContentProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {theme.name};
+            {theme.name}
           </motion.h1>
         </div>
         

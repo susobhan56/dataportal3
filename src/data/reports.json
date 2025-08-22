@@ -265,7 +265,35 @@
       "thumbnail": "/images/hage3.png",
       "file": "/reports/Women-Ageing_Invisible-or-Empowered-a-HelpAge-India-2023-report.pdf",
       "lastUpdated": "2025-04-20"
+    },
+    {
+      "id": "dev-report-1",
+      "name": "Odisha Developement Report 2020",
+      "theme": "development",
+      "description": "A-Report by Odisha Development Initiative",
+      "thumbnail": "/images/dev1.jpg",
+      "file": "/reports/Odisha Development Report-2020.pdf",
+      "lastUpdated": "2025-04-20"
+    },
+    {
+      "id": "dev-report-2",
+      "name": "National Multi-Dimensional Poverty Index (MPI) Report 2015-16",
+      "theme": "development",
+      "description": "A-Report by Niti Aayog",
+      "thumbnail": "/images/dev2.jpg",
+      "file": "/reports/National_MPI_India.pdf",
+      "lastUpdated": "2025-04-20"
+    },
+    {
+      "id": "dev-report-3",
+      "name": "India-National-Multidimentional-Poverty-Index-2023",
+      "theme": "development",
+      "description": "A-Report by Niti Aayog",
+      "thumbnail": "/images/dev3.jpg",
+      "file": "/reports/India-National-Multidimentional-Poverty-Index-2023.pdf",
+      "lastUpdated": "2025-04-20"
     }
+
     
   ] 
 }
