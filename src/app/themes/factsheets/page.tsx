@@ -1,3 +1,5 @@
+'use client'
+
 import Layout from '@/components/Layout';
 import { factsheets } from '@/data/factsheets';
 import FactsheetCard from '@/components/FactsheetCard';
