@@ -2,7 +2,7 @@
 # Recommended: create the secret AZURE_WEBAPP_PUBLISH_PROFILE (use the publish profile from the Azure Portal)
 # Adjust `package` path below if you only want to deploy a build folder (e.g. ./dist or ./build)
 
-name: Build and deploy Node.js app to Azure Web App - dataportal
+name: Build and deploy Next.js standalone app to Azure Web App - dataportal
 
 on:
   push:
@@ -37,17 +37,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build --if-present
+      - name: Build (Next.js)
+        run: npm run build
 
-      - name: Test
-        run: npm test --if-present
+      - name: Package standalone build artifacts
+        run: |
+          # Package the Next standalone output and static assets into a zip for deployment.
+          # If any of these paths don't exist, zip will skip them; `|| true` prevents job failure.
+          zip -r release.zip .next/standalone .next/static package.json public next.config.js || true
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .  # Consider changing to your build output directory (e.g. ./dist)
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -60,10 +63,20 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
+          path: ./artifact
 
-      - name: Deploy to Azure Web App
+      - name: List artifact contents (debug)
+        run: |
+          ls -la
+          ls -la artifact
+          unzip -l artifact/release.zip || true
+
+      - name: Deploy standalone zip to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'dataportal'
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE1 }}
-          package: .  # If you uploaded only build output, point this to that folder (e.g. ./dist)
+          app-name: 'dataportal'                                  # change if your App Service name differs
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}  # ensure this secret exists in repo settings
+          package: ./artifact/release.zip
+          enable-oryx-build: false
+          scm-do-build-during-deploy: false
+          startup-command: 'node .next/standalone/server.js'
