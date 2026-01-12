@@ -1,6 +1,14 @@
-# Build and deploy Node.js app to Azure Web App - dataportal
-# Recommended: create the secret AZURE_WEBAPP_PUBLISH_PROFILE (use the publish profile from the Azure Portal)
-# Adjust `package` path below if you only want to deploy a build folder (e.g. ./dist or ./build)
+# Build and deploy Next.js standalone app to Azure Web App - dataportal
+# This workflow builds Next with standalone output, packages the .next/standalone artifacts,
+# deploys using `az webapp deploy` and sets the startup command to run the standalone server.
+#
+# Required repo secrets:
+# - AZURE_CLIENT_ID
+# - AZURE_TENANT_ID
+# - AZURE_CLIENT_SECRET
+# - AZURE_SUBSCRIPTION_ID
+# - AZURE_RESOURCE_GROUP
+# - AZURE_WEBAPP_NAME
 
 name: Build and deploy Next.js standalone app to Azure Web App - dataportal
 
@@ -40,11 +48,20 @@ jobs:
       - name: Build (Next.js)
         run: npm run build
 
+      - name: Ensure standalone output exists (debug)
+        run: |
+          echo "Listing .next directory:"
+          ls -la .next || true
+          echo "Listing .next/standalone (if present):"
+          ls -la .next/standalone || true
+
       - name: Package standalone build artifacts
         run: |
           # Package the Next standalone output and static assets into a zip for deployment.
           # If any of these paths don't exist, zip will skip them; `|| true` prevents job failure.
           zip -r release.zip .next/standalone .next/static package.json public next.config.js || true
+          echo "release.zip created with contents:"
+          unzip -l release.zip || true
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -71,13 +88,36 @@ jobs:
           ls -la artifact
           unzip -l artifact/release.zip || true
 
-      - name: Deploy standalone zip to Azure Web App
-        uses: azure/webapps-deploy@v3
+      - name: Azure Login (Service Principal)
+        uses: azure/login@v1
         with:
-          app-name: 'dataportal'                                  # change if your App Service name differs
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE1 }}  # ensure this secret exists in repo settings
-          package: ./artifact/release.zip
-          enable-oryx-build: false
-          scm-do-build-during-deploy: false
-          startup-command: 'node .next/standalone/server.js'
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
 
+      - name: Deploy zip to Azure Web App and set startup command
+        uses: azure/CLI@v1
+        with:
+          azcliversion: "3.16.0"
+          inlineScript: |
+            set -euo pipefail
+            RG="${{ secrets.AZURE_RESOURCE_GROUP }}"
+            APP="${{ secrets.AZURE_WEBAPP_NAME }}"
+            ZIPPATH="./artifact/release.zip"
+
+            echo "Deploying ${ZIPPATH} to ${APP} in resource group ${RG}..."
+            # Deploy the zip artifact to the web app (Linux Web App recommended)
+            az webapp deploy --resource-group "$RG" --name "$APP" --src-path "$ZIPPATH" --type zip
+
+            echo "Setting startup command to run .next/standalone/server.js..."
+            az webapp config set --resource-group "$RG" --name "$APP" --startup-file "node .next/standalone/server.js"
+
+            echo "Restarting webapp..."
+            az webapp restart --resource-group "$RG" --name "$APP"
+
+        env:
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
