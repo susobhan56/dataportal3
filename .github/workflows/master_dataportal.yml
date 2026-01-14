@@ -68,6 +68,8 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          enable-AzPSSession: false # Add this
+          auth-type: 'SERVICE_PRINCIPAL' # Explicitly set this
 
       - name: Deploy to Azure Web App
         uses: azure/CLI@v1
@@ -90,3 +92,4 @@ jobs:
 
             echo "Restarting webapp..."
             az webapp restart --resource-group "$RG" --name "$APP"
+
