@@ -1,4 +1,3 @@
-# Build and deploy Next.js standalone app to Azure Web App - dataportal
 name: Build and deploy Next.js standalone app to Azure Web App - dataportal
 
 on:
@@ -13,7 +12,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,19 +27,18 @@ jobs:
 
       - name: Build (Next.js)
         run: npm run build
-        # Ensure your next.config.js has: output: 'standalone'
 
       - name: Package standalone build artifacts
         run: |
-          # 1. Standalone mode requires public and static folders to be copied manually
+          # Copy static files into standalone directory
           cp -r public .next/standalone/public
           cp -r .next/static .next/standalone/.next/static
 
-          # 2. Zip from INSIDE the standalone folder so server.js is at the root
+          # Zip from inside the standalone folder so server.js is at the root
           cd .next/standalone
           zip -r ../../release.zip .
           
-      - name: Upload artifact for deployment job
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: node-app
@@ -50,46 +47,48 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    # FIX: This permission block resolves the "ACTIONS_ID_TOKEN_REQUEST_URL" error
     permissions:
       contents: read
       id-token: write 
 
     steps:
-      - name: Download artifact from build job
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: node-app
 
-      - name: Azure Login (Service Principal)
+      - name: Azure Login
         uses: azure/login@v2 
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-          enable-AzPSSession: false # Add this
-          auth-type: 'SERVICE_PRINCIPAL' # Explicitly set this
+          # Forces the use of the Client Secret instead of OIDC
+          auth-type: 'SERVICE_PRINCIPAL'
 
-      - name: Deploy to Azure Web App
+      - name: Deploy and Configure Azure Web App
         uses: azure/CLI@v1
         with:
           azcliversion: "latest"
           inlineScript: |
             set -euo pipefail
-            RG="${{ secrets.AZURE_RESOURCE_GROUP }}"
-            APP="${{ secrets.AZURE_WEBAPP_NAME }}"
             
-            echo "Deploying to ${APP}..."
-            az webapp deploy --resource-group "$RG" --name "$APP" --src-path "release.zip" --type zip
+            # 1. Deploy the zip
+            az webapp deploy --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+              --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
+              --src-path "release.zip" --type zip
 
-            echo "Setting startup command and Port..."
-            # Since we zipped from inside /standalone, server.js is now at the root
-            az webapp config set --resource-group "$RG" --name "$APP" --startup-file "node server.js"
+            # 2. Set startup command to the standalone entry point
+            az webapp config set --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+              --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
+              --startup-file "node server.js"
             
-            # Optional: Ensure the App Service knows to use port 3000 or 8080
-            az webapp config appsettings set --resource-group "$RG" --name "$APP" --settings PORT=8080
+            # 3. Set the PORT for Azure Linux App Service
+            az webapp config appsettings set --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+              --name "${{ secrets.AZURE_WEBAPP_NAME }}" \
+              --settings PORT=8080
 
-            echo "Restarting webapp..."
-            az webapp restart --resource-group "$RG" --name "$APP"
-
+            # 4. Restart to apply changes
+            az webapp restart --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+              --name "${{ secrets.AZURE_WEBAPP_NAME }}"
