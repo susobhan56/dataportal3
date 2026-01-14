@@ -1,15 +1,4 @@
 # Build and deploy Next.js standalone app to Azure Web App - dataportal
-# This workflow builds Next with standalone output, packages the .next/standalone artifacts,
-# deploys using `az webapp deploy` and sets the startup command to run the standalone server.
-#
-# Required repo secrets:
-# - AZURE_CLIENT_ID
-# - AZURE_TENANT_ID
-# - AZURE_CLIENT_SECRET
-# - AZURE_SUBSCRIPTION_ID
-# - AZURE_RESOURCE_GROUP
-# - AZURE_WEBAPP_NAME
-
 name: Build and deploy Next.js standalone app to Azure Web App - dataportal
 
 on:
@@ -30,39 +19,28 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Use Node.js 22.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
-
-      - name: Cache npm
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '22'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build (Next.js)
         run: npm run build
-
-      - name: Ensure standalone output exists (debug)
-        run: |
-          echo "Listing .next directory:"
-          ls -la .next || true
-          echo "Listing .next/standalone (if present):"
-          ls -la .next/standalone || true
+        # Ensure your next.config.js has: output: 'standalone'
 
       - name: Package standalone build artifacts
         run: |
-          # Package the Next standalone output and static assets into a zip for deployment.
-          # If any of these paths don't exist, zip will skip them; `|| true` prevents job failure.
-          zip -r release.zip .next/standalone .next/static package.json public next.config.js || true
-          echo "release.zip created with contents:"
-          unzip -l release.zip || true
+          # 1. Standalone mode requires public and static folders to be copied manually
+          cp -r public .next/standalone/public
+          cp -r .next/static .next/standalone/.next/static
 
+          # 2. Zip from INSIDE the standalone folder so server.js is at the root
+          cd .next/standalone
+          zip -r ../../release.zip .
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
@@ -72,53 +50,43 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    # FIX: This permission block resolves the "ACTIONS_ID_TOKEN_REQUEST_URL" error
     permissions:
-      contents: write
+      contents: read
+      id-token: write 
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: node-app
-          path: ./artifact
-
-      - name: List artifact contents (debug)
-        run: |
-          ls -la
-          ls -la artifact
-          unzip -l artifact/release.zip || true
 
       - name: Azure Login (Service Principal)
-        uses: azure/login@v1
+        uses: azure/login@v2 
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
 
-      - name: Deploy zip to Azure Web App and set startup command
+      - name: Deploy to Azure Web App
         uses: azure/CLI@v1
         with:
-          azcliversion: "3.16.0"
+          azcliversion: "latest"
           inlineScript: |
             set -euo pipefail
             RG="${{ secrets.AZURE_RESOURCE_GROUP }}"
             APP="${{ secrets.AZURE_WEBAPP_NAME }}"
-            ZIPPATH="./artifact/release.zip"
+            
+            echo "Deploying to ${APP}..."
+            az webapp deploy --resource-group "$RG" --name "$APP" --src-path "release.zip" --type zip
 
-            echo "Deploying ${ZIPPATH} to ${APP} in resource group ${RG}..."
-            # Deploy the zip artifact to the web app (Linux Web App recommended)
-            az webapp deploy --resource-group "$RG" --name "$APP" --src-path "$ZIPPATH" --type zip
-
-            echo "Setting startup command to run .next/standalone/server.js..."
-            az webapp config set --resource-group "$RG" --name "$APP" --startup-file "node .next/standalone/server.js"
+            echo "Setting startup command and Port..."
+            # Since we zipped from inside /standalone, server.js is now at the root
+            az webapp config set --resource-group "$RG" --name "$APP" --startup-file "node server.js"
+            
+            # Optional: Ensure the App Service knows to use port 3000 or 8080
+            az webapp config appsettings set --resource-group "$RG" --name "$APP" --settings PORT=8080
 
             echo "Restarting webapp..."
             az webapp restart --resource-group "$RG" --name "$APP"
-
-        env:
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-
