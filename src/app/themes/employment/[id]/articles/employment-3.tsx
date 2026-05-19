@@ -13,7 +13,7 @@ export default function EmploymentArticle3() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Workforce Participation and Unemployment in <br />Odisha’s Working-Age Population
       </h1>
       <p className="para">
@@ -28,7 +28,7 @@ export default function EmploymentArticle3() {
         about "jobless growth", but while these concerns were apprehension dispelled by noting the non-comparability 
         of this data with those of the other rounds.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Share of Working Age (age-15-64) WFPR & UR in Odisha (in %)
       </h5>
       {/* Flourish Visualization */}

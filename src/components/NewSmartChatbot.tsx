@@ -342,10 +342,10 @@ Try asking about any topic or data source!`;
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end">
       {!isVisible ? null : minimized ? (
         <button
-          className="bg-primary-600 text-white rounded-full shadow-lg p-2 flex items-center justify-center hover:bg-primary-700 transition-all"
+          className="bg-primary-600 text-white rounded-full shadow-lg p-3 flex items-center justify-center hover:bg-primary-700 transition-all group"
           onClick={() => handleMinimizeToggle(false)}
           aria-label="Open Chatbot"
         >
@@ -353,20 +353,23 @@ Try asking about any topic or data source!`;
             <Image
               src="/icons/chatbot.svg"
               alt="Chatbot"
-              width={32}
-              height={32}
-              className="w-8 h-8"
+              width={28}
+              height={28}
+              className="w-7 h-7 group-hover:scale-110 transition-transform"
             />
             {unreadCount > 0 && (
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              <div className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center border-2 border-white">
                 {unreadCount}
               </div>
             )}
           </div>
         </button>
       ) : (
-        <div ref={chatbotRef} className="w-[400px] max-w-full bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-fade-in">
-          <div className="bg-primary-600 text-white px-4 py-3 font-semibold text-base flex items-center justify-between">
+        <div 
+          ref={chatbotRef} 
+          className="w-[calc(100vw-32px)] md:w-[400px] max-w-full bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-fade-in max-h-[80vh] md:max-h-[600px]"
+        >
+          <div className="bg-primary-600 text-white px-4 py-3 font-semibold text-base flex items-center justify-between shrink-0">
             <span>Portal Assistant</span>
             <div className="flex items-center gap-2">
               <button

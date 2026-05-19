@@ -9,7 +9,7 @@ export default function MigrationArticle2() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Short-Term Circular Migration from Odisha:<br /> Young, Rural, and Vulnerable
       </h1>
       <p className="para">

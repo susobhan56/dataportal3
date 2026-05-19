@@ -12,7 +12,7 @@ export default function MigrationArticle8() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Odisha’s Migration Turnaround: From Outflow to <br />Inflow
       </h1>
       <p className="para">
@@ -31,7 +31,7 @@ export default function MigrationArticle8() {
         long-term permanent migration from the state is becoming more selective and from urban origin, 
         the poorest of the poor from rural areas migrate on a seasonal basis. 
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Share of Return Migrants to the Inter-state In-migrants (in %)
       </h5>
       <FlourishEmbed src="visualisation/23893511" />

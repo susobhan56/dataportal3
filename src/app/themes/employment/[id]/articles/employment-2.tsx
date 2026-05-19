@@ -13,7 +13,7 @@ export default function EmploymentArticle2() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Labour in Transition: Navigating Odisha’s Chang-<br />ing Demographic Landscape
       </h1>
       <p className="para">
@@ -30,7 +30,7 @@ export default function EmploymentArticle2() {
         As the population ages, younger workers may bear a dual burden of caring for both children and the elderly, while 
         demand for healthcare and social protection is expected to grow, straining public resources. 
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Trends in Share of Working Age Population (Age 15-59) in Total Population, Odisha
       </h5>
       {/* Flourish Visualization */}

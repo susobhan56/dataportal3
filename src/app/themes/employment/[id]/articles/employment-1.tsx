@@ -13,7 +13,7 @@ export default function EmploymentArticle1() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Bridging the Gap: Reclaiming Women’s Role in <br />Odisha’s Workforce
       </h1>
       <p className="para">
@@ -28,7 +28,7 @@ export default function EmploymentArticle1() {
         Odisha increasing by 10 percentage points, suggesting that recent policies or shifts in the economic environment 
         may have encouraged more women to enter the labour market.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Structure of Workforce across Genders (Working age-15-64 years) in Odisha (in %)
       </h5>
       {/* Flourish Visualization */}

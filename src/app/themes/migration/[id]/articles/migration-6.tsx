@@ -12,7 +12,7 @@ export default function MigrationArticle6() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Changing Patterns of Interstate Out-Migration <br /> from Odisha
       </h1>
       <p className="para">
@@ -31,7 +31,7 @@ export default function MigrationArticle6() {
         Micro-studies suggest that 2.5 million people left Odisha annually between 2011 and 2016, with 
         0.9 million workers residing in Surat alone.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Interstate Outmigrants from Odisha, 1991-2021 (in %)
       </h5>
       <FlourishEmbed src="visualisation/23892128" />

@@ -13,7 +13,7 @@ export default function EmploymentArticle5() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Shifting Gears: Odisha’s Journey from Farm to<br /> Factory and Beyond
       </h1>
       <p className="para">
@@ -27,7 +27,7 @@ export default function EmploymentArticle5() {
         agriculture's capacity to absorb labour, pushing workers toward other sectors like construction and mining, 
         which have emerged as key employment generators in the non-farm sector. 
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Employment and GSVA Share across major Industries in Odisha (in %)
       </h5>
       {/* Flourish Visualization */}

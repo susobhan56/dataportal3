@@ -12,7 +12,7 @@ export default function EducationArticle4() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Infrastructural Gaps Undermine Quality <br />Education in Odisha
       </h1>
       <p className="para">
@@ -30,7 +30,7 @@ export default function EducationArticle4() {
         above. In Odisha, the figure is even lower, at just 5.4%, and about 50% of schools have 
         fewer than seven of these facilities. 
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Percentage of Schools at Elementary Level with No. of Infrastructure Facilities Available <br />in 2021-22
       </h5>
       <FlourishEmbed src="visualisation/23860926" />

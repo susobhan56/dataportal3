@@ -13,7 +13,7 @@ export default function HealthArticle2() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Hypertension and Diabetes on the Rise: <br />Odisha’s  Cross-Generational Health Crisis
       </h1>
       <p className="para">
@@ -39,11 +39,11 @@ export default function HealthArticle2() {
         resources and manpower previously used to combat childhood illness and deaths. This can now be 
         redirected to support the elderly population.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         No. of Hypertension and Diabetes Patients in Odisha by 2036 (in millions)
       </h5>
       <FlourishEmbed src="visualisation/23842439" />
-      <p style={{ textAlign: "left", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%", marginLeft: "24%" }}>
+      <p style={{ textAlign: "left", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%",  }}>
         Source: The prevalence rate in the past surveys (for people aged 15-49 years- NFHS-5 & for 
         people aged above 49 years- LASI wave-1) has<br /> been multiplied by the projected population 
         figure of the DIU, CYSD to get the size of healthcare requirements.<br />

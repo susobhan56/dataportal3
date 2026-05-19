@@ -12,7 +12,7 @@ export default function MigrationArticle5() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Odisha's Evolving Migration Landscape
       </h1>
       <p className="para">
@@ -30,7 +30,7 @@ export default function MigrationArticle5() {
         lower than the Census of 2011 figure of 36.7%. Interestingly, migration rates obtained from NSS 
         and PLFS were higher in Odisha compared to the national average, contrary to the Census figures.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Share of Migrants in Odisha's Population (in %)
       </h5>
       <FlourishEmbed src="visualisation/23871984" />

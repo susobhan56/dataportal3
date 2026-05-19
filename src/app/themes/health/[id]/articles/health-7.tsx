@@ -9,7 +9,7 @@ export default function HealthArticle7() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Inequality in the Womb: Maternal Health Dispar-<br />ities in Odisha
       </h1>
       <p className="para">

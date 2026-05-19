@@ -13,7 +13,7 @@ export default function DemographyArticle2() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Shifting Balance: The Changing Sex Ratio in <br /> Odisha
       </h1>
       <p className="para">
@@ -23,7 +23,7 @@ export default function DemographyArticle2() {
         a key measure for guiding gender-sensitive policies and promoting inclusive and sustainable 
         development.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Trends in Sex Ratio in Odisha
       </h5>
       <FlourishEmbed src="visualisation/23840967" />

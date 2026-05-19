@@ -12,7 +12,7 @@ export default function EducationArticle2() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Cost of Schooling and Gender Gaps in Odisha: <br />NSS 75th Round Reveals Stark Inequalities
       </h1>
       <p className="para">
@@ -27,7 +27,7 @@ export default function EducationArticle2() {
         about Rs 1000 higher than the Rs 4712 spent per girl. This gender-based gap in spending widens 
         as children progress from elementary to higher secondary education.  
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Average Household Expenditure (Rs.) per Student by Gender on School Education in Odisha, <br />2017-18
       </h5>
       <FlourishEmbed src="visualisation/23862220" />
