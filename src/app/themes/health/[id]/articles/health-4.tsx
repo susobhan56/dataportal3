@@ -13,7 +13,7 @@ export default function HealthArticle4() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         One-Third of Odisha’s Children Battling Mal-<br />nutrition: A Dual Burden of Deficiency and Excess
       </h1>
       <p className="para">
@@ -31,7 +31,7 @@ export default function HealthArticle4() {
         the most share of severely wasted children. As mentioned above, the share of overweight children in the 
         state has increased between the last two rounds of
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         <b>Nutritional Status of Children in Odisha & India (in %)</b>
       </h5>
       {/* Flourish Visualization */}
@@ -58,7 +58,7 @@ export default function HealthArticle4() {
           margin: 0 auto;
         }
       `}</style>
-      <p style={{ textAlign: "left", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%", marginLeft: "24%" }}>
+      <p style={{ textAlign: "left", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%",  }}>
         Source: NFHS-4,5
       </p>
       <p className="para">

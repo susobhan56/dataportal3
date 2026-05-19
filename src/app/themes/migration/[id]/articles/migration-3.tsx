@@ -12,7 +12,7 @@ export default function MigrationArticle3() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Changing Trends and Regional Patterns of Inter-<br />State In-Migration to Odisha
       </h1>
       <p className="para">
@@ -42,7 +42,7 @@ export default function MigrationArticle3() {
         This suggests a shift toward long-term circular migration, where migrants return home after 
         completing their work cycle, as these states deny these migrants long-term opportunities.  
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Distribution of Inter-state In-migrants by Reason for Migration (in %)
       </h5>
       <FlourishEmbed src="visualisation/23872501" />

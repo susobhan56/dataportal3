@@ -13,7 +13,7 @@ export default function HealthArticle1() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Changing Populations, Unchanged Rights?<br /> SRHR  in Odisha Today
       </h1>
       <p className="para">
@@ -26,7 +26,7 @@ export default function HealthArticle1() {
         number, timing, and spacing of children, while sexual rights impact maternal health, adolescent 
         fertility, and the incidence of sexually transmitted infections. <br />
         <FlourishEmbed src="visualisation/23856199" />
-        <p style={{ textAlign: "right", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%", marginLeft: "24%" }}>
+        <p style={{ textAlign: "right", fontSize: "0.8rem", fontStyle: "italic", color: "#555", marginBottom: "1%",  }}>
           Source: NFHS-4,5
         </p>
         Understanding reproductive rights involves access to information about reproductive health, 
@@ -48,7 +48,7 @@ export default function HealthArticle1() {
         health issues, making it essential to maintain strong, responsive services for this changing 
         demographic.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Contraceptive Usage among Men and Married Women in Odisha
       </h5>
       

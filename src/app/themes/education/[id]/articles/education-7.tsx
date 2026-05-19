@@ -12,7 +12,7 @@ export default function EducationArticle7() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Demographic Shifts and the Future <br />of Small Schools in Odisha
       </h1>
       <p className="para">
@@ -37,7 +37,7 @@ export default function EducationArticle7() {
         and geographic conditions must be central to any strategy aimed at addressing the issue of 
         small schools in Odisha.  
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Distribution of Government Schools by Enrolment Size (in %)
       </h5>
       <FlourishEmbed src="visualisation/23859652" />

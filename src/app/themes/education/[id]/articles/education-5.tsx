@@ -12,7 +12,7 @@ export default function EducationArticle5() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Odisha’s Learning Crisis Deepens with Age: NAS<br /> 2021 Highlights Alarming Decline in Proficiency
       </h1>
       <p className="para">
@@ -29,7 +29,7 @@ export default function EducationArticle5() {
         the system, which could hinder Odisha's ability to fully harness the potential of its younger 
         population during the demographic transition.  
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Student Performance Levels in Language and Mathematics (Class 5 and Class 8), Odisha
       </h5>
       <FlourishEmbed src="visualisation/23862074" />

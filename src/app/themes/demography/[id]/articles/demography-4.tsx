@@ -12,7 +12,7 @@ export default function DemographyArticle4() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Odisha’s Age Shift: Turning Demographic Change <br /> into Opportunity
       </h1>
       <p className="para">
@@ -29,7 +29,7 @@ export default function DemographyArticle4() {
         (aged 15-59 years) sustains the economy and social systems and the elderly (aged 60+ years) create
         rising demands for healthcare, social security, and elder care.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Age-wise Population Share in Odisha (in %)
       </h5>
       {/* Flourish Visualization */}

@@ -9,7 +9,7 @@ export default function HealthArticle6() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Odisha’s Double Burden of Malnutrition: <br />Nutritional Challenges Across the Life Course
       </h1>
       <p className="para">

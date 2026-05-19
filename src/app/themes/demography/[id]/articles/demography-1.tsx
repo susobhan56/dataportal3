@@ -110,7 +110,7 @@ export default function DemographyArticle1() {
         Rate) during the 1970s and 1980s, followed by a more rapid decline after the 1990s,
         primarily due to the faster decline in the birth rate.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: 0 }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: 0 }}>
         Population Growth Trends of Odisha
       </h5>
       {/* Flourish Visualization */}

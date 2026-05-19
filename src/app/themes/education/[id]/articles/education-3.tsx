@@ -12,7 +12,7 @@ export default function EducationArticle3() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Educational Demand and Supply: <br />Balancing Access and Efficiency
       </h1>
       <p className="para">

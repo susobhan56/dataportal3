@@ -12,7 +12,7 @@ export default function MigrationArticle1() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Characteristics of Out-Migrants from Odisha: <br /> Ageing, Urbanizing and Unequal
       </h1>
       <p className="para">
@@ -37,7 +37,7 @@ export default function MigrationArticle1() {
         interstate male out-migrants indicates that more educated and experienced people are migrating 
         out.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Age Profile of Inter-state Out-migrants from Odisha, 2020-21 (in %)
       </h5>
       <FlourishEmbed src="visualisation/23892427" />

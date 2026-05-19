@@ -12,7 +12,7 @@ export default function EducationArticle1() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Bridging the Literacy Gap: Odisha’s Adult<br /> Education Challenge Amid Demographic Transition
       </h1>
       <p className="para">
@@ -25,7 +25,7 @@ export default function EducationArticle1() {
         older, less-educated individuals is expected to grow, underscoring the urgent need for targeted 
         literacy programs for adults.  
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Age-Wise Distribution of Population by Completed Level of Education in Odisha
       </h5>
       <FlourishEmbed src="visualisation/23861483" />

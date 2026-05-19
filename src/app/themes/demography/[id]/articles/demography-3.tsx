@@ -13,7 +13,7 @@ export default function DemographyArticle3() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Falling Fertility, Rising Questions: Odisha at a <br /> Demographic Tipping Point
       </h1>
       <p className="para">
@@ -30,7 +30,7 @@ export default function DemographyArticle3() {
         as early as 2013, seven years ahead of India overall. Today, urban areas in Odisha have a TFR of 
         just 1.2—comparable to countries like Japan and South Korea—while rural areas report a TFR of 1.9. 
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Total Fertility Rate Projections in Odisha
       </h5>
       <FlourishEmbed src="visualisation/23841643" />

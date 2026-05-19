@@ -12,7 +12,7 @@ export default function MigrationArticle7() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         A Shift Towards Return Migration
       </h1>
       <p className="para">
@@ -31,7 +31,7 @@ export default function MigrationArticle7() {
         Jammu & Kashmir, with cycles lasting six months to two years. This longer-term circular 
         migration explains the sharp increase in return migrants to the state.
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Share of Return Migrants to the Inter-state In-migrants (in %)
       </h5>
       <FlourishEmbed src="visualisation/23872709" />

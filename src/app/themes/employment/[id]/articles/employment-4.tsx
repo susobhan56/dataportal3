@@ -13,7 +13,7 @@ export default function EmploymentArticle4() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         The Youth (Age 15-29) Employment Paradox: High <br />Aspirations, Higher Unemployment in Odisha
       </h1>
       <p className="para">
@@ -27,7 +27,7 @@ export default function EmploymentArticle4() {
         youth and the demands of the labour market, leading to underemployment, especially in urban regions where opportunities in 
         agriculture and informal sectors are limited compared to rural areas. 
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Share of Youth (age-15-29) WFPR & UR in Odisha (in %)
       </h5>
       {/* Flourish Visualization */}

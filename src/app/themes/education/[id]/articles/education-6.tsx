@@ -12,7 +12,7 @@ export default function EducationArticle6() {
 
   return (
     <main className="themes-content">
-      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem", marginLeft: "24%" }}>
+      <h1 className="page-title animate-fade-in" style={{ alignItems: "center", textAlign: "left", fontSize: "2.1rem",  }}>
         Why Odisha’s Children Drop Out: NFHS-5 Reveals <br />Gendered Trends in School Non-Attendance
       </h1>
       <p className="para">
@@ -29,7 +29,7 @@ export default function EducationArticle6() {
         introducing remedial education programmes, and making learning more contextual, relevant, and 
         engaging—especially for those at risk of early disengagement.  
       </p>
-      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginLeft: "24%", marginBottom: "1%" }}>
+      <h5 className="chart-title" style={{ textAlign: "left", fontSize: "1.1rem", marginBottom: "1%" }}>
         Reasons for Not Pursuing Education in Odisha
       </h5>
       <FlourishEmbed src="visualisation/23861242" />
