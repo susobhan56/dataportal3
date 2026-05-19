@@ -70,18 +70,18 @@ export default function Home() {
       )}
       
       {/* Recent Content Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="py-8 md:py-12">
         <motion.h2 
-          className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-4"
+          className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Recently Updated Content
+          Recently Updated
           <span className="relative inline-block">
             <Bell className="w-7 h-7 text-primary-500" />
             {notificationCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full px-1.5 py-0.5 min-w-[20px] text-center">
+              <span className="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold rounded-full px-1 py-0.5 min-w-[18px] text-center">
                 {notificationCount}
               </span>
             )}
@@ -89,7 +89,7 @@ export default function Home() {
         </motion.h2>
         
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="show"

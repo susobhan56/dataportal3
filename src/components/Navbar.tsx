@@ -19,10 +19,10 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto max-w-7xl px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/">
-            <h1 className="text-2xl font-bold text-indigo-600">
+            <h1 className="text-lg md:text-2xl font-bold text-indigo-600">
               Odisha Data Portal
             </h1>
           </Link>
